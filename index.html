@@ -141,7 +141,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(90, 140, 90, 0.85), rgba(90, 140, 90, 0.8)), url('https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(90, 140, 90, 0.85), rgba(90, 140, 90, 0.8)), url('https://i.ibb.co/N6c8rmxX/Summer-Garden-Collection.jpg') center/cover no-repeat;
             color: var(--white);
             padding: 10rem 0 6rem;
             margin-top: 70px;
@@ -265,6 +265,7 @@
             height: 220px;
             background-size: cover;
             background-position: center;
+            background-color: #f5f5f5; /* Fallback color */
         }
         
         .product-content {
@@ -299,7 +300,7 @@
         
         /* About Page */
         .about-hero {
-            background: linear-gradient(rgba(90, 140, 90, 0.85), rgba(90, 140, 90, 0.8)), url('https://images.unsplash.com/photo-1590080667306-eb444a5c5c8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(90, 140, 90, 0.85), rgba(90, 140, 90, 0.8)), url('https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
             padding: 8rem 0 4rem;
             margin-top: 70px;
@@ -346,6 +347,36 @@
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1rem;
+        }
+        
+        /* Products Page */
+        .products-page {
+            padding-top: 100px;
+        }
+        
+        .products-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
         }
         
         /* Cart Modal */
@@ -557,12 +588,14 @@
         }
         
         body.home-page .home-link,
-        body.about-page .about-link {
+        body.about-page .about-link,
+        body.products-page .products-link {
             color: var(--primary);
         }
         
         body.home-page .page-navigation.home-page,
-        body.about-page .page-navigation.about-page {
+        body.about-page .page-navigation.about-page,
+        body.products-page .page-navigation.products-page {
             display: block;
         }
     </style>
@@ -581,7 +614,7 @@
                 <ul>
                     <li><a href="#" class="home-link active">Home</a></li>
                     <li><a href="#" class="about-link">About</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#" class="products-link">Products</a></li>
                     <li><a href="#values">Our Values</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
@@ -634,7 +667,7 @@
                 <div class="products-grid">
                     <!-- Product 1 -->
                     <div class="product-card">
-                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
                         <div class="product-content">
                             <h3>Spring Meadow Bouquet</h3>
                             <p>A mix of peonies, ranunculus, and tulips gathered from our spring fields.</p>
@@ -646,7 +679,7 @@
                     
                     <!-- Product 2 -->
                     <div class="product-card">
-                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
                         <div class="product-content">
                             <h3>Dried Flower Bundle</h3>
                             <p>Everlasting blooms perfect for fall and winter arrangements.</p>
@@ -658,7 +691,7 @@
                     
                     <!-- Product 3 -->
                     <div class="product-card">
-                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1557860856-2d7e62b2c61d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/N6c8rmxX/Summer-Garden-Collection.jpg');"></div>
                         <div class="product-content">
                             <h3>Summer Garden Collection</h3>
                             <p>Zinnias, cosmos, and dahlias in vibrant summer colors.</p>
@@ -670,7 +703,7 @@
                     
                     <!-- Product 4 -->
                     <div class="product-card">
-                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1470509037663-253afd7f0f69?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/ksyXrZgd/Farmer-s-Choice-Bucket.jpg');"></div>
                         <div class="product-content">
                             <h3>Farmer's Choice Bucket</h3>
                             <p>A generous bucket of our freshest seasonal blooms, perfect for DIY arranging.</p>
@@ -739,7 +772,7 @@
                         <p>We're not just growing flowers; we're growing community and connection to the land. We host workshops, welcome volunteers, and share our knowledge with other aspiring flower farmers.</p>
                     </div>
                     <div class="about-img">
-                        <img src="https://images.unsplash.com/photo-1596574202437-6d6b3e0b1a3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Farmers in the flower field">
+                        <img src="https://images.unsplash.com/photo-1590080667306-eb444a5c5c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Farmers working in the flower field">
                     </div>
                 </div>
                 
@@ -774,6 +807,128 @@
         </section>
     </div>
 
+    <!-- Products Page Content -->
+    <div class="page-navigation products-page">
+        <!-- Products Hero -->
+        <section class="hero" style="background: linear-gradient(rgba(90, 140, 90, 0.85), rgba(90, 140, 90, 0.8)), url('https://i.ibb.co/N6c8rmxX/Summer-Garden-Collection.jpg') center/cover no-repeat;">
+            <div class="container">
+                <h1>Our Seasonal Offerings</h1>
+                <p>Hand-harvested, field-grown flowers available for pickup or local delivery.</p>
+            </div>
+        </section>
+
+        <!-- Products Content -->
+        <section style="padding-top: 3rem;">
+            <div class="container">
+                <div class="products-filter">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="in-season">In Season Now</button>
+                    <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+                    <button class="filter-btn" data-filter="bundles">Dried & Bulbs</button>
+                    <button class="filter-btn" data-filter="coming-soon">Coming Soon</button>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="in-season bouquets">
+                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-content">
+                            <h3>Spring Meadow Bouquet</h3>
+                            <p>A mix of peonies, ranunculus, and tulips gathered from our spring fields.</p>
+                            <div class="product-price">$28.00</div>
+                            <span class="product-status in-season">In Season</span>
+                            <button class="btn add-to-cart" data-id="1" data-name="Spring Meadow Bouquet" data-price="28.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card" data-category="bundles">
+                        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="product-content">
+                            <h3>Dried Flower Bundle</h3>
+                            <p>Everlasting blooms perfect for fall and winter arrangements.</p>
+                            <div class="product-price">$32.00</div>
+                            <span class="product-status limited">Limited Stock</span>
+                            <button class="btn add-to-cart" data-id="2" data-name="Dried Flower Bundle" data-price="32.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card" data-category="coming-soon bouquets">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/N6c8rmxX/Summer-Garden-Collection.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Summer Garden Collection</h3>
+                            <p>Zinnias, cosmos, and dahlias in vibrant summer colors.</p>
+                            <div class="product-price">$35.00</div>
+                            <span class="product-status in-season">Coming Soon</span>
+                            <button class="btn add-to-cart" data-id="3" data-name="Summer Garden Collection" data-price="35.00">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card" data-category="in-season bouquets">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/ksyXrZgd/Farmer-s-Choice-Bucket.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Farmer's Choice Bucket</h3>
+                            <p>A generous bucket of our freshest seasonal blooms, perfect for DIY arranging.</p>
+                            <div class="product-price">$45.00</div>
+                            <span class="product-status in-season">In Season</span>
+                            <button class="btn add-to-cart" data-id="4" data-name="Farmer's Choice Bucket" data-price="45.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card" data-category="in-season">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/FkSWC15z/Perennial-Garden-Bouquet.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Perennial Garden Bouquet</h3>
+                            <p>Long-lasting perennials including echinacea, lavender, and phlox.</p>
+                            <div class="product-price">$38.00</div>
+                            <span class="product-status in-season">In Season</span>
+                            <button class="btn add-to-cart" data-id="5" data-name="Perennial Garden Bouquet" data-price="38.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card" data-category="bundles">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/GQPnZXpv/Fall-Bulb-Collection.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Fall Bulb Collection</h3>
+                            <p>Tulip, daffodil, and crocus bulbs for spring blooming.</p>
+                            <div class="product-price">$24.00</div>
+                            <span class="product-status limited">Limited Stock</span>
+                            <button class="btn add-to-cart" data-id="6" data-name="Fall Bulb Collection" data-price="24.00">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="product-card" data-category="coming-soon">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/XZhTrZKM/Winter-Evergreen-Bundle.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Winter Evergreen Bundle</h3>
+                            <p>Fragrant evergreens, berries, and pinecones for winter arrangements.</p>
+                            <div class="product-price">$42.00</div>
+                            <span class="product-status in-season">Coming Soon</span>
+                            <button class="btn add-to-cart" data-id="7" data-name="Winter Evergreen Bundle" data-price="42.00">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="product-card" data-category="in-season bouquets">
+                        <div class="product-img" style="background-image: url('https://i.ibb.co/9HtGrN16/Special-Occasion-Bouquet.jpg');"></div>
+                        <div class="product-content">
+                            <h3>Special Occasion Bouquet</h3>
+                            <p>A premium arrangement for weddings, anniversaries, or celebrations.</p>
+                            <div class="product-price">$65.00</div>
+                            <span class="product-status in-season">In Season</span>
+                            <button class="btn add-to-cart" data-id="8" data-name="Special Occasion Bouquet" data-price="65.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- Contact/Footer -->
     <footer id="contact">
         <div class="container">
@@ -793,7 +948,7 @@
                     <ul>
                         <li><a href="#" class="home-link">Home</a></li>
                         <li><a href="#" class="about-link">About Our Farm</a></li>
-                        <li><a href="#products">Shop Flowers</a></li>
+                        <li><a href="#" class="products-link">Shop Flowers</a></li>
                         <li><a href="#values">Our Farming Values</a></li>
                         <li><a href="#">Workshops & Events</a></li>
                     </ul>
@@ -934,7 +1089,7 @@
                 e.target.style.color = 'white';
                 
                 setTimeout(() => {
-                    e.target.textContent = e.target.getAttribute('data-id') === '3' ? 'Notify Me' : 'Add to Cart';
+                    e.target.textContent = e.target.getAttribute('data-id') === '3' || e.target.getAttribute('data-id') === '7' ? 'Notify Me' : 'Add to Cart';
                     e.target.style.backgroundColor = '';
                     e.target.style.color = '';
                 }, 1000);
@@ -989,6 +1144,50 @@
                 
                 // Scroll to top
                 window.scrollTo(0, 0);
+            });
+        });
+        
+        document.querySelectorAll('.products-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.body.className = 'products-page';
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu if open
+                document.getElementById('mainNav').classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Product filtering
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                const productCards = document.querySelectorAll('.product-card');
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
         
